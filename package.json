@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "socket.io, webrtc",
   "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "dev": "nodemon",
     "clean": "yarn rimraf .dist",
