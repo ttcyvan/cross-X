@@ -1,5 +1,3 @@
 import { Server } from "./server";
-const serve = new Server();
-serve.listen((port: any) =>{
-    console.log(`le port de lancement est  :`, port)
-});
+const serve = new Server(5000);
+serve.listen();

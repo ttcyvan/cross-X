@@ -10,10 +10,11 @@ export class Server {
 
   private activeSockets: string[] = [];
 
-  private readonly DEFAULT_PORT = 5000;
-
-  constructor() {
-    this.initialize();
+  //private readonly DEFAULT_PORT = 5000;
+  private port: number
+  constructor( port: number ) {
+    this.port = port
+    
   }
 
   private initialize(): void {
@@ -87,9 +88,17 @@ export class Server {
     });
   }
 
-  public listen(callback: (port: number) => void): void {
-    this.httpServer.listen(this.DEFAULT_PORT, () => {
-      callback(this.DEFAULT_PORT);
-    });
-  }
+  // public listen(callback: (port: number) => void): void {
+  //   this.initialize();
+  //   this.httpServer.listen(this.port, () => {
+  //     callback(this.port);
+  //   });
+  // }
+
+  public async listen(): Promise<void> {
+    this.initialize();
+    this.httpServer.listen(this.port, () => {
+      console.log(`Server is listening on ${this.port}`)
+    })
+  
 }
