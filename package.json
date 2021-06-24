@@ -8,8 +8,8 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "clean": "yarn rimraf .dist",
-    "build": "yarn clean && yarn babel src/ --out-dir .dist/ --extensions \".ts\" --copy-files"
+    "clean": "npm rimraf .dist",
+    "build": "npm clean && yarn babel src/ --out-dir .dist/ --extensions \".ts\" --copy-files"
   },
   "author": "yvan tenekeu",
   "license": "ISC",
