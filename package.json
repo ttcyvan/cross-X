@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "nodemon",
     "clean": "npm rimraf .dist",
-    "build": "npm clean && yarn babel src/ --out-dir .dist/ --extensions \".ts\" --copy-files"
+    "build": "npm clean && npm babel src/ --out-dir .dist/ --extensions \".ts\" --copy-files"
   },
   "author": "yvan tenekeu",
   "license": "ISC",
